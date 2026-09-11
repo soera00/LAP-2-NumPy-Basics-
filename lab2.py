@@ -1,5 +1,5 @@
 #LAP2
-#Sarah Aljammaz
+#Sarah Aljammaz-2250030227
 
 import numpy as np
 
