@@ -1,6 +1,6 @@
 # Lab 02: NumPy Basics 
 
-### Code
+## Code
 
 ```
 import numpy as np
