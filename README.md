@@ -1,4 +1,5 @@
 # Lab 02: NumPy Basics
+Sarah Aljammaz-2250030227
 
 ## Code
 
