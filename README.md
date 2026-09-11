@@ -1,8 +1,8 @@
-# Lab 02: NumPy Basics 
+# Lab 02: NumPy Basics
 
 ## Code
 
-```
+```python
 import numpy as np
 
 # 3.1 Create the Image Matrix
@@ -29,17 +29,19 @@ print("Min Intensity:", img.min())
 # Question 4: Decrease border pixels brightness by 5
 img[0, :] -= 5
 img[-1, :] -= 5
-img[:, 0] -= 5
-img[:, -1] -= 5
+img[1:-1, 0] -= 5
+img[1:-1, -1] -= 5
 print("Border Adjusted Image:\n", img)
 
 # Question 5: Standard Deviation
 print("Standard Deviation:", img.std())
+```
 
-
+---
 
 ## Output
 
+```text
 Original Image:
  [[ 0  1  2  3  4  5]
  [ 6  7  8  9 10 11]
@@ -71,26 +73,39 @@ Updated Image:
 Mean Intensity: 22.0
 Max Intensity: 38
 Min Intensity: 0
+
+Border Adjusted Image:
+ [[-5 -4 -3 -2 -1  0]
+ [ 1 17 18 19 20  6]
+ [ 7 23 24 25 26 12]
+ [13 29 30 31 32 18]
+ [19 35 36 37 38 24]
+ [25 26 27 28 29 30]]
+
 Standard Deviation: 12.785625609340444
+```
 
-# Lab Questions
+---
 
-1.	Why is reshaping important in NumPy?
-It allows changing the dimensions of an array like from 1D to a 2D matrix without modifying the underlying data, which is necessary for image representation.  
+## Lab Questions
 
-2.	How does slicing help in image processing?
-Slicing allows us to select specific parts or regions of an image matrix.
+* **1. Why is reshaping important in NumPy?**
+  * It allows changing the dimensions of an array like from 1D to a 2D matrix without modifying the underlying data, which is necessary for image representation.
 
-3.	What would happen if brightness enhancement were applied to the entire image?
-The brightness of every pixel would increase by 10, so the entire image would become brighter instead of only the center region.
+* **2. How does slicing help in image processing?**
+  * Slicing allows us to select and manipulate specific parts or regions of an image matrix.
 
-4.	Modify the code to decrease brightness of border pixels by 5 units.
-img[0, :] -= 5
-img[-1, :] -= 5
-img[1:-1, 0] -= 5
-img[1:-1, -1] -= 5
+* **3. What would happen if brightness enhancement were applied to the entire image?**
+  * The brightness of every pixel would increase by 10, so the entire image would become brighter instead of only the center region.
 
-5.	Compute the standard deviation of the final image matrix.
-  Code:   print("Final Standard Deviation:", img.std())
-  Output:  12.785625609340444
+* **4. Modify the code to decrease brightness of border pixels by 5 units:**
+  ```python
+  img[0, :] -= 5
+  img[-1, :] -= 5
+  img[1:-1, 0] -= 5
+  img[1:-1, -1] -= 5
+  ```
 
+* **5. Compute the standard deviation of the final image matrix:**
+  * **Code:** `print("Final Standard Deviation:", img.std())`
+  * **Output:** `12.785625609340444`
