@@ -39,7 +39,7 @@ print("Standard Deviation:", img.std())
 
 
 ## Output
-```text
+
 Original Image:
  [[ 0  1  2  3  4  5]
  [ 6  7  8  9 10 11]
@@ -73,7 +73,8 @@ Max Intensity: 38
 Min Intensity: 0
 Standard Deviation: 12.785625609340444
 
-#Lab Questions
+# Lab Questions
+
 1.	Why is reshaping important in NumPy?
 It allows changing the dimensions of an array like from 1D to a 2D matrix without modifying the underlying data, which is necessary for image representation.  
 
